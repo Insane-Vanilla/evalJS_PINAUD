@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jeu de dés</title>
+
+    <!--META-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!--SCRIPT-->
+    <script src="script.js" async></script>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="layout">
+        
+        <!--BLOC GAUCHE-->
+        <div class="left">
+        
+
+                <div class="p1">
+                    <h2>PLAYER 1  <img src="icones/rond.png" alt="rond" class="rond"></h2> 
+
+                    <p class="round1" id="hold1">0</p>
+
+                    <div class="current1">
+                        <p class="global1">CURRENT</p>
+                        <p id="nb1" class="nb">0</p>
+                    </div>
+                </div>
+
+
+        </div>
+
+        <div class="titre">
+
+            <h1><button><img src="icones/plus.png" alt="newgame" class="newgame" id="newgame"></button>
+                NEW GAME</h1>
+        </div>
+
+        <div>
+            <img src="icones/des.png" alt="des" class="des">
+        </div>
+
+        <div class="rolldice">
+            <p>ROLLDICE</p>
+            <button id="btn-roll"><img src="icones/refresh.png" alt="rolldice" class="icon_rolldice" ></button>
+        </div>
+
+        <div class="hold">
+            <p>HOLD</p>
+            <button><img src="icones/hold.png" alt="hold" class="icon_hold"></button>
+        </div>
+
+        <!--BLOC DROIT-->
+        <div class="right">
+
+            <div class="p2">
+            
+                <h2>PLAYER 2  <img src="icones/rond.png" alt="rond" class="rond"></h2>
+                <p class="round2">0</p>
+                
+                <div class="current2">
+                    <p class="global2">CURRENT 2</p>
+                    <p class="nb"> 0</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+</body>
+</html>
