@@ -1,19 +1,29 @@
 
-// DECLARER LES JOUEURS //
+// CONSTRUIRE LES JOUEURS //
 
-let player1 = new Player('player1score', true);
+class Player {
+    constructor (id, roundScore, globalScore, turn) {
+    this.id = id;
+    this.roundScore = 0;
+    this.globalScore = 0;
+    this.turn = turn; 
+}
+}
 
-let player2 = new Player('player2Score', false);
+let player1 = new Player('1', roundScore1, globalScore1, false);
+
+let player2 = new Player('2', roundScore2, globalScore2, false);
 
 let playersList = [player1, player2]; 
 
 
 // FAIRE JOUER LES JOUEURS UN PAR UN //
 
+let currentPlayer;
+
+let firstTurn = 0;
+
 for (let i=0 ; i <= playersList.length ; i++)
-
-
-
 
 let leftBackground = document.querySelector('#left');
 let rightBackground = document.querySelector('#right');
@@ -31,61 +41,84 @@ if (playerList[1]) {
 // LANCER LES DES //
 
 
-let rolldice = document.getElementById('btn-roll');
 
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-let nbRandom = getRandom(1,6);
 
 document.getElementById('nb1').innerHTML = nbRandom;
 
 rolldice.addEventListener('click', getRandom);
 
 
+function play() {
 
-// GARDER LE SCORE POUR LE JOUEUR1 //
+    if (firstTurn === 0) {
+        player = player1;
+        player.turn = true
+    }
 
-//let hold = document.getElementById('hold1');
-//function totalScore( current1+random1)
+   if (currentPlayer.turn == true) {
+    let rolldice = document.getElementById('btn-roll');
+    document.getElementById('nb1').innerHTML = nbRandom;
+    rolldice.addEventListener('click', getRandom);
+    currentPlayer.currentScore += nbRandom;
+   }
 
+    // SI UN JOUEUR OBTIENT 1, LE TOUR CHANGE //
 
+    if (nbRandom ===1) {
+        currentPlayer.turn = false;
 
+        if (currentPlayer.id = player1.id) {
+            currentPlayer = player2;
+            firstTurn++;
+        } else {currentPlayer = player1;
+                firstTurn++}
+    } 
 
-
-// GARDER LE SCORE POUR LE JOUEUR2 //
-
-
-
-
-// SI LE JOUEUR OBTIENT 1, LE TOUR CHANGE //
-
-if (nbRandom ===1) {
-    //tour = autre joueur
-//}
-
-
-//LE JEU S'ARRETE DES QUE LE SCORE EST DE 100 //
-
-
-if (hold1===100) {
+    //LE JEU S'ARRETE DES QUE LE SCORE EST DE 100 //
+    if (globalScore1===100) {
     alert ("Le jeu est terminé, joueur 1 a gagné");
-    hold1 =0;
-    hold2=0;
-    current1=0;
-    current2=0;
-}
-
-if (hold2===100) {
+    }
+    if (globalScore2===100) {
     alert ("Le jeu est terminé, joueur 2 a gagné");
-    hold1 =0;
-    hold2=0;
-    current1=0;
-    current2=0;
+    }
+
 }
+  
+
+
+// GARDER LE SCORE POUR LE JOUEUR1 ET DONNER LE TOUR AU JOUEUR2 //
+
+let round = document.getElementById('hold1');
+
+function globalScore( currentScore + nbRandom);
+
+
+
+
+
+// GARDER LE SCORE POUR LE JOUEUR2 ET DONNER LE TOUR AU JOUEUR1//
+
+
+
+
+
+
+
 
 
 // RECOMMENCER LE JEU
 
-function resetGame
+let newGame = document.querySelector('#newgame');
+
+newGame.addEventListener('click', resetGame);
+
+function resetGame() {
+    firstTurn = 0;
+    player1= new Player ("globalScore1", false);
+    player2= new Player ("globalScore2", false);
+    play();
+};
