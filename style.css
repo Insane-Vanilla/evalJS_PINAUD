@@ -1,0 +1,132 @@
+/* GENERAL */
+
+html{
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/*FONTS*/
+
+h1 {
+    text-align: center;
+    z-index: 3;
+    vertical-align: middle;
+}
+
+h2 {
+    letter-spacing: 5px;
+}
+
+
+.global1, .global2 {
+    color: rgb(32, 178, 170);
+    margin-top: 10px;
+}
+.round1, .round2 {
+    color: black;
+    margin-top: 10px;
+}
+
+
+.nb1, .nb2 {
+    color: white;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+
+/* LAYOUT */
+
+.titre {
+    position: relative;
+    z-index: 2;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left:1px;
+    top:1px;
+    z-index:1;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right:1px;
+    top:1px;
+    z-index:1;
+}
+
+
+.p1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top:150px;
+}
+
+.p2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top:150px;
+}
+
+.container1 {
+    background-color: rgb(32, 178, 170);
+}
+
+.container2 {
+    background-color: rgb(32, 178, 170);
+}
+
+
+/* ELEMENTS */
+
+.rond {
+    width: 20px;
+}
+
+.des {
+    position : relative;
+    top:100px;
+    z-index:2;
+    background-color: transparent;
+}
+
+.rolldice {
+    position : relative;
+    display: flex;
+    flex-direction: row;
+    z-index:2;
+    margin-left:20px;
+}
+
+.hold {
+    position : relative;
+    display: flex;
+    flex-direction: row;
+    z-index:2;
+    margin-left:20px;
+}
+
+.icon_rolldice, .icon_hold, .btn-newgame {
+    margin-left:20px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    box-shadow: 10px 5px 5px lightblue ;
+}
+
+button:active {
+    box-shadow: 10px 5px 5px rgb(32, 178, 170);
+}

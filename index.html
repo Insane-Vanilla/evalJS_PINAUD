@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jeu de dés</title>
+
+    <!--META-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="media.css"/>
+
+    <!--SCRIPT-->
+    <script src="script.js" async></script>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="layout">
+        
+        <!--BLOC GAUCHE-->
+        <div id="left" class="left">
+
+            <!--JOUEUR 1-->
+            <div class="p1">
+                <h2>PLAYER 1  <img src="icones/rond.png" alt="rond" class="rond" id="point1"></h2> 
+                <!--SCORE TOTAL JOUEUR 1-->
+                <p class="global1" id="global1">0</p>
+                <!--SCORE COURANT JOUEUR 1-->
+                <div class="container1">
+                    <p class="round1">CURRENT</p>
+                    <p id="nb1" class="nb1">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!--MILIEU-->
+
+            <!--BOUTON NEW GAME-->
+            <div class="titre">
+                <h1><button type="button" id="btn-newgame"><img src="icones/plus.png" alt="newgame" class="btn-newgame"></button> NEW GAME</h1>
+            </div>
+
+            <!--IMAGE FACES DES-->
+            <div>
+                <img class ="des" id="dice" src="./dices/5.png" alt="dés">
+            </div>
+
+            <!--BOUTON LANCER DES-->
+            <div class="rolldice">
+                <p>ROLLDICE</p>
+                <button type="button" id="btn-roll"><img src="icones/refresh.png" alt="rolldice" class="icon_rolldice" ></button>
+            </div>
+
+            <!--BOUTON GARDER SCORE-->
+            <div class="hold">
+                <p>HOLD</p>
+                <button type="button" id="btn-hold"><img src="icones/hold.png" alt="hold" class="icon_hold"></button>
+            </div>
+
+        <!--BLOC DROIT-->
+        <div id="right" class="right">
+            <div class="p2">
+
+            <!--JOUEUR 2-->
+                <h2>PLAYER 2  <img src="icones/rond.png" alt="rond" class="rond" id="point2"></h2>
+                <!--SCORE TOTAL JOUEUR 2-->
+                <p class="global2" id="global2">0</p>
+                <!--SCORE COURANT JOUEUR 2-->
+                <div class="container2">
+                    <p class="round2">CURRENT</p>
+                    <p class="nb2" id="nb2">0</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+<script src="script.js" async></script>
+
+</body>
+</html>
